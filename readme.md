@@ -158,7 +158,13 @@ Please submit the printed result.
 
 试了好几次，得到答案 `CHA`。
 
-这道题很迷，过于抽象，最后才试出来，一度准备爆破（也就26^3种，用字典筛一遍还更少）。
+这道题很迷，过于抽象，最后才试出来，一度准备爆破（也就26^3种，用字典筛一遍还更少）。payload 的构建方法后文有详细的介绍。
+
+~~我希腊神话的知识储备都来源于 FGO~~
+
+~~农神不应该长这样吗（~~
+
+<img src="https://fgo.wiki/images/thumb/6/66/%E5%BE%97%E5%A2%A8%E5%BF%92%E8%80%B3-%E5%B7%AE%E5%88%862.png/400px-%E5%BE%97%E5%A2%A8%E5%BF%92%E8%80%B3-%E5%B7%AE%E5%88%862.png" alt=" " style="zoom:40%;" />
 
 ## C5 The Sound of Music
 
@@ -232,7 +238,7 @@ window.loaction.href
 https://botweb.app/form?conf={"title":"2023春節紅包挑戰","content":[[{"field":"challenge","type":"picker","name":"挑戰題","options":[{"name":"C1 - Broken Keyboard","value":"broken-keyboard"},{"name":"C2 - Circle Around","value":"circle-around"},{"name":"C3 - Frontend Master","value":"frontend-master"},{"name":"C4 - Letters from Olympians","value":"letters-from-olympians"},{"name":"C5 - The Sound of Music","value":"the-sound-of-music"},{"name":"C6 - Wish Upon an Algorithm","value":"wish-upon-an-algorithm"},{"name":"B1 - The Hard Way","value":"the-hard-way"},{"name":"B2 - xxxx","value":"xxxx"},{"name":"B3 - Damage Calculator","value":"damage-calculator"}]}],[{"field":"answer","type":"textarea","name":"你的答案","placeholder":"My answer"}]],"submitBtnText":"提交","submitAs":"data","submitIn":"sha256"}
 ```
 
-json 一般按 key 的首字母排列，可以猜到原文为 `{"answer":"610","challenge":"broken-keyboard"}`，散列方式为 `SHA256`。测试发现正确。
+传输数据一般用 json，json 又一般按 key 的首字母排列，可以猜到原文为 `{"answer":"610","challenge":"broken-keyboard"}`，散列方式为 `SHA256`。测试发现正确。
 
 #### 后记2
 
